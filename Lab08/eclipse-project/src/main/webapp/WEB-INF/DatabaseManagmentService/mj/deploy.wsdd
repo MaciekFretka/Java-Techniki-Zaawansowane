@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from DatabaseManagmentService WSDL service -->
+
+  <service name="DatabaseManagment" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://mj"/>
+      <parameter name="wsdlServiceElement" value="DatabaseManagmentService"/>
+      <parameter name="schemaQualified" value="http://mj"/>
+      <parameter name="wsdlServicePort" value="DatabaseManagment"/>
+      <parameter name="className" value="mj.DatabaseManagment"/>
+      <parameter name="wsdlPortType" value="DatabaseManagment"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://mj" xmlns:retNS="http://mj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addClient" qname="operNS:addClient" returnQName="retNS:addClientReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Name" type="tns:string"/>
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:LastName" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://mj" xmlns:retNS="http://mj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getAllClients" qname="operNS:getAllClients" returnQName="retNS:getAllClientsReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://mj" xmlns:retNS="http://mj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getClientDues" qname="operNS:getClientDues" returnQName="retNS:getClientDuesReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:client_id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://mj" xmlns:retNS="http://mj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addInstalation" qname="operNS:addInstalation" returnQName="retNS:addInstalationReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:address" type="tns:string"/>
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:type" type="tns:string"/>
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userID" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://mj" xmlns:retNS="http://mj" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getClientInstalations" qname="operNS:getClientInstalations" returnQName="retNS:getClientInstalationsReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://mj" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:client_id" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="addClient getAllClients getClientInstalations addInstalation getClientDues"/>
+
+  </service>
+</deployment>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="modulBiblioteki">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Lab01 — kopia/target/modulBiblioteki.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

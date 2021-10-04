@@ -1,0 +1,2 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema%22%3E <xs:element name="nazwa">
+ <xs:complexType> <xs:sequence> <xs:element type="xs:string" name="imie"/> <xs:element type="xs:string" name="nazwisko"/> </xs:sequence> </xs:complexType> </xs:element> </xs:schema >

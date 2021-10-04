@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mj.ControllerOffice">
+   <children>
+      <Label fx:id="bilboard" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="112.0" prefHeight="39.0" prefWidth="511.0" text="Następny numerek: 102" visible="false">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="177.0" layoutY="300.0" mnemonicParsing="false" onAction="#next" text="Pobierz następny numerek" />
+   </children>
+</AnchorPane>

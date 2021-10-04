@@ -1,0 +1,9 @@
+Lab1:
+    Propozycja Oceny:5
+    Ocena TK:
+Lab12
+    Propozycja Oceny:4+
+    Ocena TK:
+Lab3:
+    Propozycja Oceny:4
+    Ocena TK:

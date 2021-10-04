@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://mj" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://mj" xmlns:intf="http://mj" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://mj" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="addClient">
+    <complexType>
+     <sequence>
+      <element name="Name" type="xsd:string"/>
+      <element name="LastName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addClientResponse">
+    <complexType>
+     <sequence>
+      <element name="addClientReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAllClients">
+    <complexType/>
+   </element>
+   <element name="getAllClientsResponse">
+    <complexType>
+     <sequence>
+      <element name="getAllClientsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientDues">
+    <complexType>
+     <sequence>
+      <element name="client_id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientDuesResponse">
+    <complexType>
+     <sequence>
+      <element name="getClientDuesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addInstalation">
+    <complexType>
+     <sequence>
+      <element name="address" type="xsd:string"/>
+      <element name="type" type="xsd:string"/>
+      <element name="userID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addInstalationResponse">
+    <complexType>
+     <sequence>
+      <element name="addInstalationReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientInstalations">
+    <complexType>
+     <sequence>
+      <element name="client_id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientInstalationsResponse">
+    <complexType>
+     <sequence>
+      <element name="getClientInstalationsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addInstalationResponse">
+
+      <wsdl:part element="impl:addInstalationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientInstalationsResponse">
+
+      <wsdl:part element="impl:getClientInstalationsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addInstalationRequest">
+
+      <wsdl:part element="impl:addInstalation" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addClientResponse">
+
+      <wsdl:part element="impl:addClientResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllClientsRequest">
+
+      <wsdl:part element="impl:getAllClients" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientDuesRequest">
+
+      <wsdl:part element="impl:getClientDues" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addClientRequest">
+
+      <wsdl:part element="impl:addClient" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientInstalationsRequest">
+
+      <wsdl:part element="impl:getClientInstalations" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllClientsResponse">
+
+      <wsdl:part element="impl:getAllClientsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientDuesResponse">
+
+      <wsdl:part element="impl:getClientDuesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="DatabaseManagment">
+
+      <wsdl:operation name="addClient">
+
+         <wsdl:input message="impl:addClientRequest" name="addClientRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addClientResponse" name="addClientResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllClients">
+
+         <wsdl:input message="impl:getAllClientsRequest" name="getAllClientsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAllClientsResponse" name="getAllClientsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientDues">
+
+         <wsdl:input message="impl:getClientDuesRequest" name="getClientDuesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getClientDuesResponse" name="getClientDuesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addInstalation">
+
+         <wsdl:input message="impl:addInstalationRequest" name="addInstalationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addInstalationResponse" name="addInstalationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientInstalations">
+
+         <wsdl:input message="impl:getClientInstalationsRequest" name="getClientInstalationsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getClientInstalationsResponse" name="getClientInstalationsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="DatabaseManagmentSoapBinding" type="impl:DatabaseManagment">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="addClient">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addClientRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addClientResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllClients">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAllClientsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAllClientsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientDues">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getClientDuesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getClientDuesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addInstalation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addInstalationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addInstalationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientInstalations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getClientInstalationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getClientInstalationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="DatabaseManagmentService">
+
+      <wsdl:port binding="impl:DatabaseManagmentSoapBinding" name="DatabaseManagment">
+
+         <wsdlsoap:address location="http://localhost:8080/Lab8/services/DatabaseManagment"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

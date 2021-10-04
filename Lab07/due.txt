@@ -1,0 +1,2 @@
+Installation: 4, Amount: 100, Date: 2020-03-21
+Installation: 99, Amount: 122, Date: 2020-01-01
